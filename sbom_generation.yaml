@@ -17,7 +17,7 @@ steps:
   - type: Command
     name: "Install jax"
     command: |
-      pip install pip==20.2.4
+      /usr/local/bin/python3.10 -m pip install --upgrade pip
       pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_releases.html
       
   - type: Command
