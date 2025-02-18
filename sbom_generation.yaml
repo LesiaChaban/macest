@@ -13,6 +13,12 @@ env:
     PYTHON_CMD: "python3"
     CDXGEN_DEBUG_MODE: "debug"
 steps:
+
+  - type: Command
+    name: "Update python version"
+    command: |
+      python3 -m venv --upgrade PYTHON_CMD
+      
   - type: Command
     name: "Download the version 10.10.0 of cdxgen globally"
     command: |
