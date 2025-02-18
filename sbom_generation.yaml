@@ -15,9 +15,10 @@ env:
 steps:
 
   - type: Command
-    name: "Update python version"
+    name: "Install jax"
     command: |
-      python3 -m venv --upgrade PYTHON_CMD
+      pip install pip==20.2.4
+      pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_releases.html
       
   - type: Command
     name: "Download the version 10.10.0 of cdxgen globally"
